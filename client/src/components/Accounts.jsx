@@ -15,7 +15,7 @@ var Accounts = React.createClass({
 
 		return (
 			<div className="accounts-display">
-				<h3>{this.props.title} Accounts</h3>
+				<h3>{this.props.accounts[0].type} Accounts</h3>
 				<h4><span>Total Cash: £</span>{this.props.total}</h4>
 				{accountDisplay}
 			</div>

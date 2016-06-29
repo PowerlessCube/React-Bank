@@ -35,12 +35,10 @@ var BankingBox = React.createClass({
 					total={this.getBankingTotal(this.state.accounts)}
 				/>
 				<Accounts
-					title="Personal"
 					accounts={this.filterAccounts("Personal")}
 					total={this.getBankingTotal(this.filterAccounts("Personal"))}
 				/>
 				<Accounts
-					title="Business"
 					accounts={this.filterAccounts("Business")}
 					total={this.getBankingTotal(this.filterAccounts("Business"))}
 				/>
