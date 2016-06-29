@@ -15,7 +15,12 @@ h4 {
 }
 
 ul {
+	padding: 1px;
 	list-style-type: none;
+}
+
+li {
+	text-align: center;
 }
 
 .main-display {

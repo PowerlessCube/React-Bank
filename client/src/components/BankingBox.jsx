@@ -1,6 +1,7 @@
 var React = require('react');
 
 var Accounts = require('./Accounts');
+var BankingForm = require('./BankingForm');
 var BankingTotal = require('./BankingTotal');
 var SampleAccounts = require('../sample_accounts.js')
 
@@ -26,6 +27,10 @@ var BankingBox = React.createClass({
 		return accounts
 	},
 
+	addAccount: function(e) {
+		// body...
+	},
+
 	render: function() {
 		return (
 			<div className="main-display">
@@ -41,6 +46,7 @@ var BankingBox = React.createClass({
 					accounts={this.filterAccounts("Business")}
 					total={this.getBankingTotal(this.filterAccounts("Business"))}
 				/>
+			<BankingForm />
 			</div>
 		)
 	}
