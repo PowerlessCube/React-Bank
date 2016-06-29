@@ -10,7 +10,7 @@ var Accounts = React.createClass({
 	render: function() {
 		var accountDisplay = this.props.accounts.map(function(account) {
 			return (
-				<div key={account.owner}>
+				<div key={account.owner} className="account">
 					<ul>
 						<li><span>Name: </span>{account.owner}</li>
 						<li><span>Balance: £</span>{account.amount.toFixed(2)}</li>

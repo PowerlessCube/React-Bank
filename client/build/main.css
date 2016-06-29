@@ -28,6 +28,7 @@ li {
 .main-display {
 	background-color: #002b5c;
 	color: #fff;
+	text-align: center;
 	margin: 10vh;
 	padding: 2vh;
 	border-radius: 10px;
@@ -35,7 +36,8 @@ li {
 
 /*SUB DIV DISPLAY*/
 .div-display {
-	margin: 5vh;
+	text-align: center;
+	margin: 10vh;
 	padding: 2vh;
 	background-color: #e9ebee;
 	color: #002b5c;
@@ -49,13 +51,30 @@ li {
 }
 
 .button {
-	background-color: yellow;
+	padding: 10px 20px;
+	background-color: #34a2b2;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 #1b768b,0 1px 0 #43c9d2 inset;
+	border-style: none;
+  color: #fff;
 }
 
 .delete-button {
-	background-color: red;
+	background-color: #E54D42;
+  box-shadow: 0 3px 0 #B73D34,0 1px 0 #F2A6A0 inset;
+}
+
+.submit-button {
+	background-color: #e9ebee;
+  box-shadow: 0 3px 0 #747577,0 1px 0 #F6F7F8 inset;
+	color: #002b5c;
 }
 
 .text-field {
 	background-color: green;
+}
+
+/*ACCOUNTS*/
+.account {
+	margin: 5vh;
 }

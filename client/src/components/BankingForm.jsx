@@ -73,7 +73,7 @@ var BankingForm = React.createClass({
 						</select>
 					</label>
 					<input
-						className="button"
+						className="button submit-button"
 						type="submit"
 					/>
 					</form>
