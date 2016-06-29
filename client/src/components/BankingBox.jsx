@@ -28,7 +28,15 @@ var BankingBox = React.createClass({
 	},
 
 	addAccount: function(e) {
-		console.log("Add Account working?");
+		var newAccounts = this.state.accounts.concat([e]);
+		this.setState({accounts: newAccounts})
+	},
+
+	deleteAccount: function(owner) {
+		var filteredAccounts = this.state.accounts.filter(function(account) {
+			return account.owner != owner;
+		})
+		this.setState({accounts: filteredAccounts})
 	},
 
 	render: function() {
@@ -41,10 +49,12 @@ var BankingBox = React.createClass({
 				<Accounts
 					accounts={this.filterAccounts("Personal")}
 					total={this.getBankingTotal(this.filterAccounts("Personal"))}
+					deleteThisSucka={this.deleteAccount}
 				/>
 				<Accounts
 					accounts={this.filterAccounts("Business")}
 					total={this.getBankingTotal(this.filterAccounts("Business"))}
+					deleteThisSucka={this.deleteAccount}
 				/>
 			<BankingForm addAccount={this.addAccount}/>
 			</div>

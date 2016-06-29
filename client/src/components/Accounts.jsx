@@ -1,6 +1,12 @@
 var React = require('react');
 
 var Accounts = React.createClass({
+
+	handleDelete: function(e) {
+		console.log(e.target.value);
+		this.props.deleteThisSucka(e.target.value);
+	},
+
 	render: function() {
 		var accountDisplay = this.props.accounts.map(function(account) {
 			return (
@@ -9,9 +15,12 @@ var Accounts = React.createClass({
 						<li><span>Name: </span>{account.owner}</li>
 						<li><span>Balance: £</span>{account.amount.toFixed(2)}</li>
 					</ul>
+					<button
+						value={account.owner}
+						onClick={this.handleDelete}>X</button>
 				</div>
 			)
-		})
+		}.bind(this))
 
 		return (
 			<div className="accounts-display">
