@@ -28,7 +28,7 @@ var BankingBox = React.createClass({
 	},
 
 	addAccount: function(e) {
-		// body...
+		console.log("Add Account working?");
 	},
 
 	render: function() {
@@ -46,7 +46,7 @@ var BankingBox = React.createClass({
 					accounts={this.filterAccounts("Business")}
 					total={this.getBankingTotal(this.filterAccounts("Business"))}
 				/>
-			<BankingForm />
+			<BankingForm addAccount={this.addAccount}/>
 			</div>
 		)
 	}
