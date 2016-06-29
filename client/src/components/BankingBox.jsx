@@ -19,7 +19,6 @@ var BankingBox = React.createClass({
 		return total
 	},
 
-	// TODO: have logic filters accounts by type
 	filterAccounts: function(type) {
 		var accounts = this.state.accounts.filter(function(account) {
 			return account.type === type;
@@ -30,7 +29,7 @@ var BankingBox = React.createClass({
 	render: function() {
 		return (
 			<div className="main-display">
-				<h2> Banking Box </h2>
+				<h2> Royal Bank </h2>
 				<BankingTotal
 					total={this.getBankingTotal(this.state.accounts)}
 				/>

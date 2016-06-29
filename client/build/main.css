@@ -1,0 +1,35 @@
+* {
+	font-family: 'Roboto Slab', serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.main-display {
+	background-color: #002b5c;
+	color: #fff;
+	margin: 10vh;
+	padding: 2vh;
+	border-radius: 10px;
+}
+
+.accounts-display {
+	margin: 5vh;
+	padding: 2vh;
+	background-color: #e9ebee;
+	color: #002b5c;
+	border-radius: 10px;
+}
