@@ -46,7 +46,7 @@ var BankingForm = React.createClass({
 			<div className="div-display form-display">
 				<form onSubmit={this.addAccount}>
 					<h3>Add New Account</h3>
-					<label>Account Name:
+					<span className="number">1</span><label>Account Name:
 						<input
 							className="text-field"
 							type="text"
@@ -55,7 +55,7 @@ var BankingForm = React.createClass({
 							onChange={this.handleOwnerChange}
 						/>
 					</label>
-					<label>Account Amount:
+					<span className="number">2</span><label>Account Amount:
 						<input
 							className="text-field"
 							type="number"
@@ -64,7 +64,7 @@ var BankingForm = React.createClass({
 							onChange={this.handleAmountChange}
 						/>
 					</label>
-					<label>Account Type:
+					<span className="number">3</span><label>Account Type:
 						<select
 							className="text-field"
 							onChange={this.handleTypeChange}>

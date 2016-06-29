@@ -50,9 +50,11 @@ li {
 	color: #fff;
 }
 
+/*BUTTONS*/
 .button {
 	padding: 10px 20px;
 	background-color: #34a2b2;
+	font-size: 12px;
   border-radius: 5px;
   box-shadow: 0 3px 0 #1b768b,0 1px 0 #43c9d2 inset;
 	border-style: none;
@@ -64,17 +66,58 @@ li {
   box-shadow: 0 3px 0 #B73D34,0 1px 0 #F2A6A0 inset;
 }
 
-.submit-button {
-	background-color: #e9ebee;
-  box-shadow: 0 3px 0 #747577,0 1px 0 #F6F7F8 inset;
-	color: #002b5c;
+.delete-button:hover {
+	background-color: #CE453B;
 }
 
+.submit-button {
+	background-color: #1abc9c;
+	font-size: 16px;
+  box-shadow: 0 3px 0 #0D5E4E,0 1px 0 #8CDDCD inset;
+	color: #fff;
+	width: 80%;
+	margin-bottom: 5vh;
+}
+
+.submit-button:hover {
+	background-color: #14967C;
+}
+
+/*INPUTS*/
 .text-field {
-	background-color: green;
+	display: block;
+  background: rgba(255,255,255,.1);
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 5vh auto;
+  outline: 0;
+  width: 80%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+.text-field:focus {
+	box-shadow: 0 0 10px #43d1af;
+  border: 1px solid #43d1af;
 }
 
 /*ACCOUNTS*/
 .account {
 	margin: 5vh;
+}
+
+.number {
+	background: #1abc9c;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: .8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 15px 15px 15px 0;
 }
