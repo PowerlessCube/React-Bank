@@ -1,3 +1,4 @@
+/*GLOBAL ATTRIBUTES*/
 * {
 	font-family: 'Roboto Slab', serif;
 }
@@ -23,6 +24,7 @@ li {
 	text-align: center;
 }
 
+/*MAIN DISPLAY DIV*/
 .main-display {
 	background-color: #002b5c;
 	color: #fff;
@@ -31,10 +33,29 @@ li {
 	border-radius: 10px;
 }
 
-.accounts-display {
+/*SUB DIV DISPLAY*/
+.div-display {
 	margin: 5vh;
 	padding: 2vh;
 	background-color: #e9ebee;
 	color: #002b5c;
 	border-radius: 10px;
+}
+
+/*FORM DISPLAY*/
+.form-display {
+	background-color: #1397be;
+	color: #fff;
+}
+
+.button {
+	background-color: yellow;
+}
+
+.delete-button {
+	background-color: red;
+}
+
+.text-field {
+	background-color: green;
 }

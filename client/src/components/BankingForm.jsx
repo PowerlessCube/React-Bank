@@ -43,25 +43,39 @@ var BankingForm = React.createClass({
 
 	render: function() {
 		return (
-			<div className="form">
+			<div className="div-display form-display">
 				<form onSubmit={this.addAccount}>
+					<h3>Add New Account</h3>
+					<label>Account Name:
+						<input
+							className="text-field"
+							type="text"
+							placeholder="Enter Name"
+							value={this.state.owner}
+							onChange={this.handleOwnerChange}
+						/>
+					</label>
+					<label>Account Amount:
+						<input
+							className="text-field"
+							type="number"
+							placeholder="Enter Amount"
+							value={this.state.amount}
+							onChange={this.handleAmountChange}
+						/>
+					</label>
+					<label>Account Type:
+						<select
+							className="text-field"
+							onChange={this.handleTypeChange}>
+							<option>Business</option>
+							<option>Personal</option>
+						</select>
+					</label>
 					<input
-						type="text"
-						placeholder="Account Name"
-						value={this.state.owner}
-						onChange={this.handleOwnerChange}
+						className="button"
+						type="submit"
 					/>
-					<input
-						type="number"
-						placeholder="Account Amount"
-						value={this.state.amount}
-						onChange={this.handleAmountChange}
-					/>
-				<select onChange={this.handleTypeChange}>
-						<option>Business</option>
-						<option>Personal</option>
-					</select>
-					<input type="submit"/>
 					</form>
 			</div>
 		)

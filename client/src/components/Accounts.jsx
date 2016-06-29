@@ -16,14 +16,15 @@ var Accounts = React.createClass({
 						<li><span>Balance: £</span>{account.amount.toFixed(2)}</li>
 					</ul>
 					<button
+						className="button delete-button"
 						value={account.owner}
-						onClick={this.handleDelete}>X</button>
+						onClick={this.handleDelete}>Remove Account</button>
 				</div>
 			)
 		}.bind(this))
 
 		return (
-			<div className="accounts-display">
+			<div className="div-display">
 				<h3>{this.props.accounts[0].type} Accounts</h3>
 				<h4><span>Total Cash: £</span>{this.props.total.toFixed(2)}</h4>
 				{accountDisplay}
