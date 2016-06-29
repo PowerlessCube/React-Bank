@@ -11,20 +11,39 @@ var BankingBox = React.createClass({
 		};
 	},
 
-	getBankingTotal: function() {
+	getBankingTotal: function(accounts) {
 		var total = 0;
-		this.state.accounts.forEach(function(account) {
+		accounts.forEach(function(account) {
 			total += account.amount
 		})
 		return total
 	},
 
+	// TODO: have logic filters accounts by type
+	filterAccounts: function(type) {
+		var accounts = this.state.accounts.filter(function(account) {
+			return account.type === type;
+		});
+		return accounts
+	},
+
 	render: function() {
 		return (
-			<div>
+			<div className="main-display">
 				<h2> Banking Box </h2>
-				<BankingTotal total={this.getBankingTotal()} />
-				<Accounts />
+				<BankingTotal
+					total={this.getBankingTotal(this.state.accounts)}
+				/>
+				<Accounts
+					title="Personal"
+					accounts={this.filterAccounts("Personal")}
+					total={this.getBankingTotal(this.filterAccounts("Personal"))}
+				/>
+				<Accounts
+					title="Business"
+					accounts={this.filterAccounts("Business")}
+					total={this.getBankingTotal(this.filterAccounts("Business"))}
+				/>
 			</div>
 		)
 	}
