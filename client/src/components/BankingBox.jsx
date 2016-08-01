@@ -1,9 +1,11 @@
-var React = require('react');
+ var React = require('react');
 
 var Accounts = require('./Accounts');
 var BankingForm = require('./BankingForm');
 var BankingTotal = require('./BankingTotal');
 var SampleAccounts = require('../sample_accounts.js')
+
+// FIXME: Take a look at how the accounts are filtered as it's not allowing the last record to be deleted.
 
 var BankingBox = React.createClass({
 	getInitialState: function() {

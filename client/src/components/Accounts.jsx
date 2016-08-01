@@ -3,7 +3,6 @@ var React = require('react');
 var Accounts = React.createClass({
 
 	handleDelete: function(e) {
-		console.log(e.target.value);
 		this.props.deleteThisSucka(e.target.value);
 	},
 
@@ -13,7 +12,7 @@ var Accounts = React.createClass({
 				<div key={account.owner} className="account">
 					<ul>
 						<li><span>Name: </span>{account.owner}</li>
-						<li><span>Balance: £</span>{account.amount.toFixed(2)}</li>
+						<li><span>Balance: £</span>{account.amount.toFixed(2).toLocaleString()}</li>
 					</ul>
 					<button
 						className="button delete-button"
@@ -26,7 +25,7 @@ var Accounts = React.createClass({
 		return (
 			<div className="div-display">
 				<h3>{this.props.accounts[0].type} Accounts</h3>
-				<h4><span>Total Cash: £</span>{this.props.total.toFixed(2)}</h4>
+				<h4><span>Total Cash: £</span>{this.props.total.toFixed(2).toLocaleString()}</h4>
 				{accountDisplay}
 			</div>
 		)
